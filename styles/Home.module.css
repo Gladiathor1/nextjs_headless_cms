@@ -1,0 +1,165 @@
+.container{
+  height: 100vh;
+}
+.bannerSection{
+  height: 65%;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+
+}
+.bannerSectionImage{
+  position: absolute;
+  left: 24px;
+  top:10px;
+  width: 290px;
+  
+}
+.bannerSection video{
+  width: 100%;
+  min-width: 100%; 
+  min-height: 100%;
+  top: -100px;
+  position: relative;
+}
+
+
+.lineGradient{
+  height: 5px;
+  background: linear-gradient(to right, #efa123,65%, #03a2d3);
+}
+.bottomContainer{
+  position: relative;
+  height: 33%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.bottomInner_1{
+  flex-basis: 75%;
+  
+}
+.bottomInner_2{
+  flex-basis: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: right;
+}
+.headerText{
+  font-size: 60px;
+  color: #003760;
+  font-weight: 700;
+  margin: 0;
+}
+.bodyText{
+  font-size: 40px;
+  color: rgb(32 66 104);
+  font-weight: 400;
+  margin: 0;
+}
+.button_1{
+  flex-basis: 80%;
+  text-align: center;
+  border: 2px solid #003760 ;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  color: #003760;
+  background-color: #f5f7f9;
+  font-size: 25px;
+  font-weight: 600;
+}
+.button_1:hover{cursor: pointer;}
+.button_2{
+  flex-basis: 80%;
+  text-align: center;
+  border: 2px solid #efa020 ;
+  padding: 10px 0;
+  color: white;
+  background-color: #efa020;
+  font-size: 25px;
+  font-weight: 600;
+}
+.button_2:hover{cursor: pointer;}
+.bottomFooter{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bottomFooter p{
+  margin: 0;
+}
+.copyrightText{
+  color: rgb(217 215 215);
+  font-size: 14px;
+}
+.ETText{
+  color: rgb(217 215 215);
+  font-size: 14px;
+}
+@media only screen and (max-width: 1024px){
+  .bodyText{
+    font-size: 25px;
+  }
+  .headerText{
+  font-size: 40px;
+  }
+  .button_1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .button_2 {
+    font-size: 18px;
+  }
+  .bannerSectionImage {
+    width: 250px;
+  }
+  .bannerSection video{
+    top: 0;
+  }
+}
+@media only screen and (max-width: 768px){
+  .bodyText{
+    font-size: 20px;
+  }
+  .headerText{
+  font-size: 30px;
+  }
+  .button_1 {
+    font-size: 13px;
+  }
+  .button_2 {
+    font-size: 13px;
+  }
+  .ETText {
+    font-size: 9px;
+  }
+  .copyrightText {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 425px){
+  .bannerSection {
+    height: 36%;
+  }
+  .bannerSectionImage {
+    width: 160px;
+  }
+  .bottomInner_1 {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
+  .bottomInner_2 {
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 25px 0;
+}
+.headerText {
+  font-size: 22px;
+}
+.bodyText {
+  font-size: 16px;
+}
+}

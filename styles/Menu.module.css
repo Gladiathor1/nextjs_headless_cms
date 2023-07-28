@@ -1,0 +1,116 @@
+.content_container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.first_inner_div{
+    flex-basis: 50%;
+    background-color: #014d7c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 130px;
+    padding-bottom: 100px;
+}
+.second_inner_div{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 60%;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 0px 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 1px grey;
+    color: #245276;
+    font-size: 26px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.tabs svg{
+    width: 25px;
+    fill: #245276;
+}
+.text_container{
+    width: 55%;
+    font-size: 26px;
+    line-height: 40px;
+    color: #858585;
+}
+.text_container strong{
+    font-weight: 500;
+    color: #245276;
+}
+@media only screen and (max-width: 1600px) {
+    .tabs{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .text_container{
+        width: 52%;
+        font-size: 20px;
+        line-height: 30px;
+        color: #858585;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .tabs{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .tabs p{
+        flex-basis: 65%;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    .tabs{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .tabs p{
+        flex-basis: 75%;
+    }
+    .text_container{
+        width: 52%;
+        font-size: 14px;
+        line-height: 21px;
+        color: #858585;
+    }
+    .first_inner_div{
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    
+}
+@media only screen and (max-width: 425px) {
+    .content_container{
+        flex-wrap: wrap;
+    }
+    .first_inner_div{
+        flex-basis: 100%;
+    }
+    .second_inner_div{
+        flex-basis: 100%;
+    }
+    .tabs{
+        flex-basis: 75%;
+    }
+    .text_container{
+        width: 75%;
+    }
+    .tabs p{
+        flex-basis: 100%;
+    }
+    .first_inner_div{
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+}

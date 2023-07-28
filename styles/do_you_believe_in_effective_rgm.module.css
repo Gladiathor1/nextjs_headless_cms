@@ -1,0 +1,37 @@
+.inner_container{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFFAFF;
+    color: #003760;
+}
+.container_left{
+    flex-basis: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.container_right{
+    flex-basis: 60%;
+    height: 100%;
+}
+.inner_container_right_heading{
+    font-size: 31px;
+    margin-top: 15%;
+    margin-left: 8%;
+
+}
+.inner_container_right_paragraph{
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 8%;
+    width: 80%;
+}

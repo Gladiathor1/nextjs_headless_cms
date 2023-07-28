@@ -1,0 +1,203 @@
+.inner_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #003760;
+}
+
+.inner_container::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 375px;
+    height: 100%;
+    background-color: #EFFAFF;
+    left: 0;
+}
+
+.container_left {
+    flex-basis: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 14%;
+    align-items: flex-start;
+}
+
+.container_right {
+    flex-basis: 60%;
+    height: 100%;
+    margin-top: 14%;
+
+}
+
+.container_left_inner_one img {
+    display: none;
+    width: 480px;
+    border: 30px solid #EFFAFF;
+    border-radius: 100%;
+}
+
+.container_left_inner_two img {
+    display: none;
+    width: 480px;
+    border: 30px solid #EFFAFF;
+    border-radius: 100%;
+}
+
+.container_left_inner_three img {
+    display: none;
+    width: 480px;
+    border: 30px solid #EFFAFF;
+    border-radius: 100%;
+}
+
+.container_left_inner_four img {
+    display: none;
+    width: 480px;
+    border: 30px solid #EFFAFF;
+    border-radius: 100%;
+}
+
+.container_left_inner_one.active img {
+    display: block;
+}
+
+.container_left_inner_two.active img {
+    display: block;
+}
+
+.container_left_inner_three.active img {
+    display: block;
+}
+
+.container_left_inner_four.active img {
+    display: block;
+}
+
+.container_left_inner_second_circle {
+    position: absolute;
+    top: 170px;
+    right: -50px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 50px 2px #bfd5df;
+}
+
+.container_left_inner_first_circle {
+    position: absolute;
+    top: -16px;
+    right: 30px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 50px 2px #bfd5df;
+}
+
+.container_left_inner_third_circle {
+    position: absolute;
+    top: 360px;
+    right: 25px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 50px 2px #bfd5df;
+}
+
+.container_left_inner_first_circle img {
+    width: 100%;
+}
+
+.container_left_inner_second_circle img {
+    width: 100%;
+}
+
+.container_left_inner_third_circle img {
+    width: 100%;
+}
+
+.container_left_inner_image_two_text,
+.container_left_inner_image_three_text,
+.container_left_inner_image_four_text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    color: white;
+    width: 265px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.container_left_inner_two.active .container_left_inner_image_two_text {
+    display: block;
+}
+
+.container_left_inner_three.active .container_left_inner_image_three_text {
+    display: block;
+}
+
+.container_left_inner_four.active .container_left_inner_image_four_text {
+    display: block;
+}
+
+.container_left_inner {
+    position: relative;
+    border: 30px solid #ffffff;
+    border-radius: 100%;
+}
+
+.container_right_heading {
+    color: #093b62;
+    font-size: 31px;
+    line-height: 30px;
+    font-weight: bold;
+
+}
+
+.container_right_paragraph {
+    color: #093b62;
+    font-size: 18px;
+    line-height: 30px;
+    width: 80%;
+}
+
+.container_left_inner_first_circle.active {
+    transform: scale(1.3);
+    border: 1px solid #EFA020;
+}
+
+.container_left_inner_second_circle.active {
+    transform: scale(1.3);
+    border: 1px solid #EFA020;
+}
+
+.container_left_inner_third_circle.active {
+    transform: scale(1.3);
+    border: 1px solid #EFA020;
+}

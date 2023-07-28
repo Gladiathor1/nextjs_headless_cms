@@ -1,0 +1,49 @@
+.header_section{
+    background: linear-gradient(to right, #013860 50%, #0e6ea4 100%);
+}
+.header_section_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+.fb14{
+    flex-basis: 14%;
+}
+.fb12{
+    flex-basis: 12%;
+}
+.header_image{
+
+    text-align: center;
+}
+.menu_items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-basis: 72%;
+    padding-right: 2%;
+    flex-wrap: wrap;
+}
+.text_align_center{
+    text-align: start;
+    cursor: pointer;
+}
+.contactUs{
+    text-align: end;
+    cursor: pointer;
+}
+.contactUs_wrapper{
+    background-color: #efa021;
+    color: white;
+    text-align: start;
+    padding: 0 20px;
+    font-weight: 600;
+
+}
+.active_tab{
+    color: #efa021 ;
+    border-bottom: 8px solid #efa021;
+    font-weight: 600;
+}
