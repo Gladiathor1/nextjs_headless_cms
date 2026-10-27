@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Headless CMS Microsite
 
-## Getting Started
+An interactive, story-style marketing microsite about **Revenue Growth Management (RGM)**, built with Next.js and powered by **ButterCMS** as a headless CMS. Each step of the story ("Introduction", "Revenue leakage", "Which lever wins the RGM jackpot?", "Conclusion", …) is its own page whose text, images, videos and PDFs are managed in ButterCMS, so the content can be edited without touching code.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
+- Content pulled from ButterCMS at build time with `getStaticProps`
+- Preview mode — draft content can be shown by setting `PREVIEW=true` (the default)
+- Story pages with a tiled menu, industry and capability headers/footers
+- Pop-ups for extra information, embedded videos and PDF documents
+- Carousels using `react-slick`
+- Shared footer data in a Redux store
+- Optional local HTTPS server (`server.js`)
+
+## Tech stack
+
+- Next.js 12, React 18
+- ButterCMS JS SDK
+- Redux Toolkit
+- CSS Modules
+- Font Awesome, react-slick
+
+## Project structure
+
+```
+pages/        One page per story step, plus index and menus
+components/   Headers, footers, tiled layout, info/video/PDF pop-ups
+lib/api.js    ButterCMS client and page-fetching helpers
+store/        Redux store (footer data)
+styles/       CSS Modules per page/component
+server.js     HTTPS dev server using certificates/localhost.*
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting started
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Open [http://localhost:3000](http://localhost:3000).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### ButterCMS
 
-## Learn More
+The ButterCMS API token is configured in [`lib/api.js`](lib/api.js). Use your own read token (ideally from an environment variable) and create matching pages in ButterCMS for each story slug.
 
-To learn more about Next.js, take a look at the following resources:
+Set `PREVIEW=false` to show only published content.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Local HTTPS (optional)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Generate a self-signed certificate (the files are git-ignored):
 
-## Deploy on Vercel
+```bash
+cd certificates
+openssl req -x509 -out localhost.crt -keyout localhost.key -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost'
+cd ..
+node server.js   # https://localhost:3000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run build
+npm start
+```
